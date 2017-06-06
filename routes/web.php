@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('login/linkedin', 'Auth\LoginController@redirectToProvider');
+Route::get('login/linkedin/callback', 'Auth\LoginController@handleProviderCallback');
